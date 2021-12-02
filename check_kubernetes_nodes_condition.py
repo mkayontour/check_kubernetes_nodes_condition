@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Author: Thilo Wening <thilo.wening@netways.de>
-# Company: NETWAYS GmbH Company: NETWAYS GmbH
+# Company: NETWAYS GmbH
 # Date: 02.12.2021
 
 import argparse
@@ -11,7 +11,7 @@ from kubernetes import config, client
 
 def main():
     args = argparse.ArgumentParser(description='Check health of Kubernetes Nodes')
-    args.add_argument('-v', '--version', action='version', version='%(prog)s 1.0')
+    args.add_argument('-v', '--version', action='version', version='1.0')
     args.add_argument('--kube-config', help='Path to the kubernetes config file')
     args = args.parse_args()
 
