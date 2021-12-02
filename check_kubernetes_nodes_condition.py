@@ -23,8 +23,6 @@ def main():
     res = ""
 
     for node in kube.list_node().items:
-        nodes.append(node)
-
         res += 'Node: ' + node.metadata.name + '\n'
         for condition in node.status.conditions:
             if (condition.type == 'Ready' and condition.status != 'True') \
